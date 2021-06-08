@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link href="https://fonts.googleapis.com/css2?family=Texturina:wght@500&display=swap" rel="stylesheet">
+    <style type="text/css">
+        body {
+            background-color: black;
+            color: white;
+            font-family: 'Texturina', serif;
+        }
+        #maker {
+            float: right;
+            font-size: 10px;
+        }
+        div span {
+            border: 2px solid grey;
+            padding: 5px 5px;
+        }
+        #container {
+            border: 2px solid red;
+            border-radius: 20px;
+            border-radius: 20px;
+            margin: 50px auto;
+            width: 300px;
+        }
+        form input {
+            font-family: 'Texturina', serif;
+            display: block;
+            margin: 10px auto;
+            border: 2px solid grey;
+            border-radius: 7px;
+            width: 250px;
+            height: 25px;
+            outline: none;
+            text-align: center;
+        }
+        .btn {
+            font-family: 'Texturina', serif;
+            background-color: black;
+            display: block;
+            margin: 10px auto;
+            width: 250px;
+            height: 25px;
+            border: 2px solid grey;
+            color: white;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .btn:hover {
+            background-color: rgb(31, 30, 30);
+        }
+        div h3 {
+            text-align: center;
+            text-decoration: underline;
+            text-decoration-color: grey;
+        }
+        .re{
+            border: 2px solid #00ccff;
+        }
+        p{
+            font-size: 7px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <span>Form</span>
+        <span id="maker">Made by Deep Kr.</span>
+    </div>
+    <div id="container">
+        <h3>Welcome&nbsp;&nbsp; To&nbsp;&nbsp; Deep Kr's&nbsp;&nbsp; Form</h3>
+        <form accept-charset="utf-8">
+            <input class="re" type="text" placeholder="Enter Your Name" required/>
+            <input class="re" type="text" placeholder="Enter Your Father's Name" required/>
+            <input class="re" type="datetime" placeholder="Enter Your Birthdate" required/>
+            <input class="re" type="text" placeholder="Enter Your Gender" required=""/>
+            <input class="re" type="email" placeholder="Enter Your email" required/>
+            <input type="number" placeholder="Enter Your Number" />
+        <button class="btn">Submit</button>
+        <input type="reset" name="Reset" class="btn"/>
+        <p>*sky blue bordered spaces are required.</p>
+        </form>
+    </div>
+</body>
+</html>
