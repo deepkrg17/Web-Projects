@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="description" content="" />
+	<meta name="author" content="" />
+	<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+	<title>24H-Clock</title>
+    <style type="text/css" media="all">
+        @font-face {
+            font-family: firaCode;
+            src:url("/fonts/firaCode.ttf");
+        }
+        #container {
+            display: grid;
+            height: 90vh;
+            width: 100vw;
+            justify-content: center;
+            align-content: center;
+            font-family: firaCode;
+        }
+        img {
+            width: 100vw;
+        }
+        #mh, #hh, #sh {
+            left: 52%;
+            top: 49.1%;
+            background: black;
+            border-radius: 10px;
+            position: absolute;
+            transform-origin: left;
+        }
+        #mh {
+            width: 20%;
+            height: .5%;
+        }
+        #hh {
+            width: 15%;
+            height: .7%;
+        }
+        #sh {
+            width: 20%;
+            height: .3%;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <img src="/clk24.jpg" alt="" />
+        <span id="mh"></span>
+        <span id="hh"></span>
+        <span id="sh"></span>
+        <script type="text/javascript" charset="utf-8">
+            const setRotation = (elm, rottn) => {
+                rottn -= 90;
+                elm.style.transform = `rotate(${rottn}deg)`;
+            }
+            const setTime = (d) => {
+                hr_rottn = 30 * d.getHours() + d.getMinutes() / 2;
+                min_rottn = 6 * d.getMinutes();
+                sec_rottn = 6 * d.getSeconds();
+
+                setRotation(hh, hr_rottn);
+                setRotation(mh, min_rottn);
+                setRotation(sh, sec_rottn);
+            }
+            setInterval(() => setTime(new Date()), 1000);
+        </script>
+    </div>
+</body>
+</html>
